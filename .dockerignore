@@ -3,7 +3,7 @@
 .tools
 build
 data
-server
+/server
 web/dist
 frontend/dist
 frontend/node_modules

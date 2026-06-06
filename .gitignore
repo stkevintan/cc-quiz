@@ -1,7 +1,7 @@
 data/*.db
 data/*.db-*
 .data/
-server
+/server
 web/dist/*
 !web/dist/placeholder.txt
 .env
