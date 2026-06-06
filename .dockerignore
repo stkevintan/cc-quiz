@@ -2,9 +2,9 @@
 .github
 .tools
 build
-backend/data
-backend/server
-backend/web/dist
+data
+server
+web/dist
 frontend/dist
 frontend/node_modules
 node_modules

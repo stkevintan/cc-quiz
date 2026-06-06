@@ -5,11 +5,10 @@ Classical Chinese quiz app with a Go + Gin + SQLite backend and React + TypeScri
 ## Setup
 
 ```bash
-cp backend/.env.example backend/.env
+cp .env.example .env
 cp frontend/.env.example frontend/.env
 ./.tools/go/bin/go version   # optional: verify local Go toolchain
-cd backend && ../.tools/go/bin/go mod tidy
-cd ../frontend && npm install
+make install-deps
 ```
 
 `make backend`, `make build-backend`, and `make test-backend` will automatically use `./.tools/go/bin/go` when that local toolchain exists.
@@ -43,11 +42,12 @@ To build a single backend binary with the frontend static assets embedded via `g
 make build-app
 ```
 
-That command builds the frontend, copies the generated files into `backend/web/dist`, and produces the embedded binary at `build/classical-chinese-quiz`.
+That command builds the frontend, copies the generated files into `web/dist`, and produces the embedded binary at `build/classical-chinese-quiz`.
 
 ## Validate
 
 ```bash
+make install-deps
 make lint-backend
 make lint-frontend
 make test-backend

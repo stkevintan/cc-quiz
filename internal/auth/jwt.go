@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"classical-chinese-quiz/backend/internal/models"
+	"classical-chinese-quiz/internal/models"
 	"github.com/golang-jwt/jwt/v5"
 )
 

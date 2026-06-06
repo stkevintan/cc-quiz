@@ -1,4 +1,4 @@
-module classical-chinese-quiz/backend
+module classical-chinese-quiz
 
 go 1.25.0
 

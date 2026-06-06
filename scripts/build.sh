@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 FRONTEND_DIR="$ROOT_DIR/frontend"
-BACKEND_DIR="$ROOT_DIR/backend"
+BACKEND_DIR="$ROOT_DIR"
 EMBED_DIR="$BACKEND_DIR/web/dist"
 OUTPUT_DIR="$ROOT_DIR/build"
 OUTPUT_BIN="$OUTPUT_DIR/classical-chinese-quiz"
@@ -25,7 +25,7 @@ if [[ "${SKIP_FRONTEND_BUILD:-0}" != "1" ]]; then
   )
 fi
 
-echo "==> Syncing frontend bundle into backend embed directory"
+echo "==> Syncing frontend bundle into embedded asset directory"
 cp -R "$FRONTEND_DIR/dist"/. "$EMBED_DIR"/
 
 echo "==> Building embedded backend binary"

@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"strings"
 
-	"classical-chinese-quiz/backend/internal/config"
-	"classical-chinese-quiz/backend/internal/handlers"
-	"classical-chinese-quiz/backend/internal/middleware"
-	"classical-chinese-quiz/backend/web"
+	"classical-chinese-quiz/internal/config"
+	"classical-chinese-quiz/internal/handlers"
+	"classical-chinese-quiz/internal/middleware"
+	"classical-chinese-quiz/web"
 	"github.com/gin-gonic/gin"
 )
 
