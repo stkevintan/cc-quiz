@@ -21,6 +21,7 @@ if [[ "${SKIP_FRONTEND_BUILD:-0}" != "1" ]]; then
   echo "==> Building frontend bundle"
   (
     cd "$ROOT_DIR"
+    npm ci
     npm run build
   )
 fi
