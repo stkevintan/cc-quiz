@@ -9,14 +9,14 @@ backend:
 	$(GO) run ./cmd/server
 
 frontend:
-	cd frontend && npm run dev
+	npm run dev
 
 dev:
 	./scripts/dev.sh
 
 install-deps:
 	$(GO) mod download
-	cd frontend && npm ci
+	npm ci
 
 build-app:
 	./scripts/build.sh
@@ -27,7 +27,7 @@ build-backend:
 	$(GO) build ./cmd/server
 
 build-frontend:
-	cd frontend && npm run build
+	npm run build
 
 test-backend:
 	$(GO) test ./...
@@ -36,4 +36,4 @@ lint-backend:
 	$(GO) vet ./... && out=`find . -name '*.go' -print0 | xargs -0 $(GOFMT) -l`; if [ -n "$$out" ]; then printf '%s\n' "$$out"; exit 1; fi
 
 lint-frontend:
-	cd frontend && npm run lint
+	npm run lint

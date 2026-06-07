@@ -6,6 +6,7 @@ web/dist/*
 !web/dist/placeholder.txt
 .env
 frontend/node_modules
+node_modules
 frontend/dist
 frontend/.env
 .env

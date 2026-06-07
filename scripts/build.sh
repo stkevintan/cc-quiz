@@ -20,7 +20,7 @@ find "$EMBED_DIR" -mindepth 1 ! -name 'placeholder.txt' -exec rm -rf {} +
 if [[ "${SKIP_FRONTEND_BUILD:-0}" != "1" ]]; then
   echo "==> Building frontend bundle"
   (
-    cd "$FRONTEND_DIR"
+    cd "$ROOT_DIR"
     npm run build
   )
 fi

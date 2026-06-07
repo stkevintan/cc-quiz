@@ -32,7 +32,7 @@ BACKEND_PID=$!
 
 echo "==> Starting frontend dev server on http://localhost:5173"
 (
-  cd "$ROOT_DIR/frontend"
+  cd "$ROOT_DIR"
   npm run dev
 ) &
 FRONTEND_PID=$!
