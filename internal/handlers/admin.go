@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	"classical-chinese-quiz/backend/internal/middleware"
-	"classical-chinese-quiz/backend/internal/models"
+	"classical-chinese-quiz/internal/middleware"
+	"classical-chinese-quiz/internal/models"
 	"github.com/gin-gonic/gin"
 	"golang.org/x/crypto/bcrypt"
 )

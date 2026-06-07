@@ -5,7 +5,7 @@ import (
 	"errors"
 	"net/http"
 
-	"classical-chinese-quiz/backend/internal/middleware"
+	"classical-chinese-quiz/internal/middleware"
 	"github.com/gin-gonic/gin"
 )
 

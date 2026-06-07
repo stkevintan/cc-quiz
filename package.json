@@ -4,10 +4,11 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
-    "lint": "tsc --noEmit",
-    "build": "npm run lint && vite build",
-    "preview": "vite preview --host 0.0.0.0"
+    "dev": "vite frontend",
+    "tsc": "tsc --noEmit",
+    "lint": "npm run tsc",
+    "build": "npm run lint && vite build frontend",
+    "preview": "vite preview frontend"
   },
   "dependencies": {
     "@ant-design/icons": "latest",
@@ -17,12 +18,12 @@
     "react": "latest",
     "react-dom": "latest",
     "react-router-dom": "^7.16.0",
-    "typescript": "latest",
     "vite": "latest"
   },
   "devDependencies": {
     "@types/node": "latest",
     "@types/react": "latest",
-    "@types/react-dom": "latest"
+    "@types/react-dom": "latest",
+    "typescript": "latest"
   }
 }

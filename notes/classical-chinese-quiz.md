@@ -23,8 +23,8 @@
   - 前端：React Router、Axios、Zustand。
   - 后端：GORM、JWT、bcrypt。
 - 推荐目录：
-  - `backend/cmd/server/main.go`
-  - `backend/internal/{config,db,models,middleware,handlers,services,routes}`
+  - `cmd/server/main.go`
+  - `internal/{config,db,models,middleware,handlers,services,routes}`
   - `frontend/src/{api,router,store,types,layouts,pages,components}`
 - 认证方式：登录成功返回 JWT，前端保存 token；后端中间件解析用户和角色。
 - 测试设计：使用 `test_attempts` 表代表一次测试/试卷，`test_attempt_questions` 表固化本次抽到的题目，避免后续题库变动影响历史记录。

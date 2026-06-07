@@ -9,10 +9,10 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"classical-chinese-quiz/backend/internal/config"
-	appdb "classical-chinese-quiz/backend/internal/db"
-	"classical-chinese-quiz/backend/internal/models"
-	"classical-chinese-quiz/backend/internal/routes"
+	"classical-chinese-quiz/internal/config"
+	appdb "classical-chinese-quiz/internal/db"
+	"classical-chinese-quiz/internal/models"
+	"classical-chinese-quiz/internal/routes"
 	"github.com/gin-gonic/gin"
 )
 

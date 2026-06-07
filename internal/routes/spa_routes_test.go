@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"classical-chinese-quiz/backend/internal/config"
+	"classical-chinese-quiz/internal/config"
 	"github.com/gin-gonic/gin"
 )
 

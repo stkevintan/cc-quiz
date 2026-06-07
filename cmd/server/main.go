@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 
-	"classical-chinese-quiz/backend/internal/config"
-	"classical-chinese-quiz/backend/internal/db"
-	"classical-chinese-quiz/backend/internal/routes"
+	"classical-chinese-quiz/internal/config"
+	"classical-chinese-quiz/internal/db"
+	"classical-chinese-quiz/internal/routes"
 )
 
 func main() {

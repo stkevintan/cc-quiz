@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"strings"
 
-	"classical-chinese-quiz/backend/internal/auth"
-	"classical-chinese-quiz/backend/internal/models"
+	"classical-chinese-quiz/internal/auth"
+	"classical-chinese-quiz/internal/models"
 	"github.com/gin-gonic/gin"
 )
 

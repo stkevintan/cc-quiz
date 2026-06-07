@@ -25,14 +25,14 @@ trap cleanup EXIT INT TERM
 
 echo "==> Starting backend server on http://localhost:8080"
 (
-  cd "$ROOT_DIR/backend"
+  cd "$ROOT_DIR"
   "$GO_BIN" run ./cmd/server
 ) &
 BACKEND_PID=$!
 
 echo "==> Starting frontend dev server on http://localhost:5173"
 (
-  cd "$ROOT_DIR/frontend"
+  cd "$ROOT_DIR"
   npm run dev
 ) &
 FRONTEND_PID=$!

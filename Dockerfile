@@ -1,16 +1,19 @@
 FROM node:22-bookworm-slim AS frontend-builder
-WORKDIR /app/frontend
-COPY frontend/package.json frontend/package-lock.json ./
+WORKDIR /app
+COPY package.json package-lock.json ./
 RUN npm ci
-COPY frontend/ ./
+COPY frontend/ ./frontend/
 RUN npm run build
 
 FROM golang:1.26.3-bookworm AS backend-builder
-WORKDIR /app/backend
-COPY backend/go.mod backend/go.sum ./
+WORKDIR /app
+COPY go.mod go.sum ./
 RUN go mod download
-COPY backend/ ./
-COPY --from=frontend-builder /app/frontend/dist /app/backend/web/dist
+COPY cmd/ ./cmd/
+COPY internal/ ./internal/
+COPY web/ ./web/
+COPY .env.example ./.env.example
+COPY --from=frontend-builder /app/frontend/dist /app/web/dist
 RUN go build -o /out/classical-chinese-quiz ./cmd/server
 
 FROM debian:bookworm-slim
